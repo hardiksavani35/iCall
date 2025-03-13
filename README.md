@@ -1,24 +1,7 @@
-# call-screen
+<h5><b>iCall</b></h5>
 
-## Project setup
-```
-npm install
-```
+<p>This project is a demo application replicating the iPhone call screen UI, featuring sections like Favorites, Recent Calls, Contacts, and Voicemail.</p>
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+![alt text](image.png)
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+![alt text](image-1.png)
