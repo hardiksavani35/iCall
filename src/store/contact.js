@@ -20,11 +20,22 @@ export default {
     mutations: {
         setSearchQuery(state, query) {
             state.searchQuery = query;
+        },
+        addContact(state, contact) {
+            state.contacts.push({
+                id: state.contacts.length + 1,
+                firstname: contact.firstName, 
+                lastname: contact.lastName, 
+                phone: contact.phone
+            });  
         }
     },
     actions: {
         setSearchQuery({commit}, query) {
             commit("setSearchQuery", query);
+        },
+        addContact({ commit }, contact) {
+            commit("addContact", contact);
         } 
     },
     getters: {
