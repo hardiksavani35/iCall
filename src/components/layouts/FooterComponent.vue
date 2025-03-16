@@ -10,8 +10,9 @@
                 <span>Recents</span>
             </div>
             <div class="active">
-                <i class="fas fa-user"></i>
-                <span>Contacts</span>
+                <router-link :to="{ name: 'contact' }">
+                    <i class="fas fa-user"></i><span>Contacts</span>
+                </router-link>
             </div>
             <div>
                 <i class="fas fa-keyboard"></i>

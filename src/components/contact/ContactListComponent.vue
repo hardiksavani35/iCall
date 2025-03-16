@@ -3,13 +3,13 @@
         <div v-for="(contactsGroup, letter) in groupByContact" :key="letter" style="border-top: 1px solid #e9e9e9;">
             <div class="contact-section">{{ letter }}</div>
             <div v-for="contact in contactsGroup" :key="contact.id">
-                {{ contact.firstname }} {{ contact.lastname }}
+                <router-link :to="{ name: 'view-contact', params:{id:contact.id } }">{{ contact.firstname }} {{ contact.lastname }}</router-link>
             </div>
         </div>
     </div>
 </template>
 
-<script>
+<script> 
 export default {
     data() {
         return {
@@ -56,4 +56,5 @@ export default {
         align-items: center; 
         font-size: 16px;
     }
+    a { color: #555; text-decoration: none; }
 </style>
