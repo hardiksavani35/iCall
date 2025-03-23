@@ -2,8 +2,9 @@
     <div class="bottom-nav">
         <div class="nav-icons">
             <div>
-                <i class="fas fa-star"></i>
-                <span>Favorites</span>
+                <router-link :to="{name: 'favourite'}">
+                    <i class="fas fa-star"></i><span>Favorites</span>
+                </router-link>
             </div>
             <div>
                 <i class="fas fa-clock"></i>
