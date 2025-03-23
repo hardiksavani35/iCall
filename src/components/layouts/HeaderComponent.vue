@@ -1,7 +1,7 @@
 <template>
     <div class="header">
-      <span>Contacts</span>
-      <button class="add-button" @click="addContact()">+</button>
+        <span>{{route}}</span>
+        <button class="add-button" @click="addContact()" v-if="route == 'contact'">+</button> 
     </div>
 </template>
 
@@ -15,6 +15,11 @@
         methods: {
             addContact() {
                 this.$router.push('add-contact');
+            }
+        }, 
+        computed: {
+            route() {
+                return this.$route.name;
             }
         }
     }
@@ -31,7 +36,9 @@
         background: #fff;
         border-bottom: 1px solid #ddd;
     } 
-
+    .header span {
+        text-transform: capitalize;
+    }
     .add-button {
         font-size: 28px;
         background: none;
